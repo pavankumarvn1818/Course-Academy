@@ -127,9 +127,9 @@ cd Course-Academy
 ### 2. Setup Backend
 
 ```bash id="9n4u6x"
-cd server
+cd backend
 npm install
-npm start
+node index.js
 ```
 
 ---
@@ -137,7 +137,7 @@ npm start
 ### 3. Setup Frontend
 
 ```bash id="3u6yfx"
-cd client
+cd frontend
 npm install
 npm start
 ```
@@ -156,8 +156,8 @@ JWT_SECRET=your_secret_key
 RAZORPAY_KEY=your_razorpay_key
 RAZORPAY_SECRET=your_razorpay_secret
 
-EMAIL_USER=your_email@gmail.com
-EMAIL_PASS=your_email_app_password
+Gmail=your_email@gmail.com
+Password=your_email_app_password
 
 ```
 
