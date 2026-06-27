@@ -16,6 +16,15 @@ const app = express();
 // using middlewares
 app.use(express.json());
 app.use(cors());
+//Global err handler 
+app.use((err, req, res, next) => {
+  console.error("GLOBAL ERROR:", err);
+
+  res.status(err.status || 500).json({
+    success: false,
+    message: err.message || "Internal Server Error",
+  });
+});
 
 const port = process.env.PORT;
 
@@ -23,7 +32,7 @@ app.get("/", (req, res) => {
   res.send("Server is working");
 });
 
-app.use("/uploads", express.static("uploads"));
+//app.use("/uploads", express.static("uploads"));
 
 // importing routes
 import userRoutes from "./routes/user.js";
