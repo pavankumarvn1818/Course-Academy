@@ -1,3 +1,47 @@
+// import mongoose from "mongoose";
+
+// const schema = new mongoose.Schema({
+//   title: {
+//     type: String,
+//     required: true,
+//   },
+//   description: {
+//     type: String,
+//     required: true,
+//   },
+
+//   image: {
+//     type: String,
+//     required: true,
+//   },
+//   price: {
+//     type: Number,
+//     required: true,
+//   },
+//   duration: {
+//     type: Number,
+//     required: true,
+//   },
+//   category: {
+//     type: String,
+//     required: true,
+//   },
+//   createdBy: {
+//     type: String,
+//     required: true,
+//   },
+//   createdAt: {
+//     type: Date,
+//     default: Date.now,
+//   },
+// });
+
+// export const Courses = mongoose.model("Courses", schema);
+
+
+
+
+
 import mongoose from "mongoose";
 
 const schema = new mongoose.Schema({
@@ -5,31 +49,42 @@ const schema = new mongoose.Schema({
     type: String,
     required: true,
   },
+
   description: {
     type: String,
     required: true,
   },
 
   image: {
-    type: String,
+    type: String,          // Cloudinary secure URL
     required: true,
   },
+
+  imagePublicId: {
+    type: String,          // Cloudinary asset identifier
+    required: true,
+  },
+
   price: {
     type: Number,
     required: true,
   },
+
   duration: {
     type: Number,
     required: true,
   },
+
   category: {
     type: String,
     required: true,
   },
+
   createdBy: {
     type: String,
     required: true,
   },
+
   createdAt: {
     type: Date,
     default: Date.now,
